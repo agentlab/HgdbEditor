@@ -67,22 +67,6 @@
         </detail>
       </annotation>
       <requirement
-          name="net.sf.extjwnl.feature.feature.group"/>
-      <requirement
-          name="net.sf.extjwnl.feature.feature.jar"/>
-      <requirement
-          name="net.sf.extjwnl.feature.source.feature.group"/>
-      <requirement
-          name="net.sf.extjwnl.feature.source.feature.jar"/>
-      <requirement
-          name="net.sf.extjwnl.sdk.feature.feature.group"/>
-      <requirement
-          name="net.sf.extjwnl.sdk.feature.feature.jar"/>
-      <requirement
-          name="net.sf.extjwnl.sdk.feature.source.feature.group"/>
-      <requirement
-          name="net.sf.extjwnl.sdk.feature.source.feature.jar"/>
-      <requirement
           name="com.googlecode.concurrentlinkedhashmap.lru"/>
       <requirement
           name="com.tngtech.java.junit-dataprovider"/>
