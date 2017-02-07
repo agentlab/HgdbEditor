@@ -9,12 +9,13 @@
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore"
-    name="wordnet.e4editor"
-    label="WordNet E4 Editor">
+    name="hgdb.editor"
+    label="HgdbEditor">
   <setupTask
       xsi:type="git:GitCloneTask"
       id="ru.agentlab.wordnet.e4editor.git.clone"
-      remoteURI="agentlab/E4WordNetEditor">
+      remoteURI="agentlab/HgdbEditor"
+      pushURI="">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
@@ -130,7 +131,7 @@
   <setupTask
       xsi:type="mylyn:MylynQueriesTask"
       connectorKind="github"
-      repositoryURL="https://github.com/agentlab/E4WordNetEditor"
+      repositoryURL="https://github.com/agentlab/HgdbEditor"
       userID="${github.user.id}"
       password="${github.user.password}">
     <query summary="${scope.project.label} All Open">
@@ -166,5 +167,5 @@
   <logicalProjectContainer
       xsi:type="setup:Project"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='ru.agentlab']/@projects[name='osgi']/@projects[name='e4']/@projects[name='fx']"/>
-  <description>IDE Setup for WordNetEditor Project</description>
+  <description>IDE Setup for HgdbEditor Project</description>
 </setup:Project>
