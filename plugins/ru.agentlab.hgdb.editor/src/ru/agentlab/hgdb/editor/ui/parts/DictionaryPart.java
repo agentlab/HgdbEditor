@@ -7,6 +7,8 @@ import javax.annotation.PostConstruct;
 
 import org.eclipse.gef4.fx.anchors.DynamicAnchor;
 import org.eclipse.gef4.fx.nodes.Connection;
+import org.eclipse.gef4.fx.nodes.GeometryNode;
+import org.eclipse.gef4.geometry.planar.RoundedRectangle;
 
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -42,7 +44,11 @@ public class DictionaryPart {
     }
 
     private void fillGroup(Group group) {
-        Rectangle background = new Rectangle(GRAPH_WIDTH, GRAPH_HEIGHT);
+
+
+        //org.eclipse.gef4.geometry.planar.Rectangle
+
+        Rectangle background = new Rectangle(0, 0, GRAPH_WIDTH, GRAPH_HEIGHT);
         background.setFill(Color.BLUE);
         group.getChildren().add(background);
         int dAlpha = -1;
@@ -95,10 +101,13 @@ public class DictionaryPart {
         return new BigInteger(80, new Random()).toString();
     }
 
-    private Rectangle createRoundRectangle() {
-        Rectangle rectangle = new Rectangle(0, 0, RECTANGLE_SIZE, RECTANGLE_SIZE);
-        rectangle.setArcHeight(ARC_SIZE);
-        rectangle.setArcWidth(ARC_SIZE);
+    private GeometryNode<RoundedRectangle> createRoundRectangle() {
+        //Rectangle rectangle = new Rectangle(0, 0, RECTANGLE_SIZE, RECTANGLE_SIZE);
+        GeometryNode<RoundedRectangle> rectangle =
+            new GeometryNode<>(new RoundedRectangle(0, 0, RECTANGLE_SIZE, RECTANGLE_SIZE, ARC_SIZE, ARC_SIZE));
+
+        //rectangle.setArcHeight(ARC_SIZE);
+        //rectangle.setArcWidth(ARC_SIZE);
         rectangle.setStroke(Color.BLACK);
         rectangle.setFill(Color.WHITE);
         rectangle.setStrokeWidth(2);
