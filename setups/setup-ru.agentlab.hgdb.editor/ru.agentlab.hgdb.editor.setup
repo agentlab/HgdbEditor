@@ -13,7 +13,7 @@
     label="HgdbEditor">
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="ru.agentlab.wordnet.e4editor.git.clone"
+      id="ru.agentlab.hgdb.editor.git.clone"
       remoteURI="agentlab/HgdbEditor"
       pushURI="">
     <annotation
@@ -43,7 +43,7 @@
           source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
         <detail
             key="location">
-          <value>${ru.agentlab.wordnet.e4editor.git.clone.location/releng/ru.agentlab.wordnet.e4editor.releng/ru.agentlab.wordnet.e4editor.releng.target}</value>
+          <value>${ru.agentlab.hgdb.editor.git.clone.location/releng/ru.agentlab.hgdb.editor.releng/ru.agentlab.hgdb.editor.releng.target}</value>
         </detail>
         <detail
             key="includeAllPlatforms">
@@ -111,7 +111,7 @@
       <requirement
           name="*"/>
       <sourceLocator
-          rootFolder="${ru.agentlab.wordnet.e4editor.git.clone.location}"
+          rootFolder="${ru.agentlab.hgdb.editor.git.clone.location}"
           locateNestedProjects="true"/>
       <repositoryList
           name="Neon">
